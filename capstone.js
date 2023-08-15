@@ -10,7 +10,11 @@
 
 /** 
  * 
- * Please add these two lines in your package.json
+ * Please add these two lines in your package.json 
+
+
+  "openai": "^3.3.0",
+  "firebase-admin": "^8.9.2"
  * and create this json file
  * 
  * {
