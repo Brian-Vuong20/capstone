@@ -2,6 +2,36 @@
  * This sample demonstrates handling intents from an Alexa skill using the Alexa Skills Kit SDK (v2).
  * Please visit https://alexa.design/cookbook for additional examples on implementing slots, dialog management,
  * session persistence, api calls, and more.
+
+
+
+
+
+
+/** 
+ * 
+ * Please add these two lines in your package.json
+ * and create this json file
+ * 
+ * {
+  "type": "service_account",
+  "project_id": "voice-based-system",
+  "private_key_id": "4edcb6b58dc4c6b5befc461fc85297d81f54d022",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC0iDjakLxnvcyg\nKZxTe3LXJ/iciFc+f7wTc9JrTg9eYCkWknkgXbi717C+Gh2G03hbcQDTGOilcjuI\nAkSZearHokSlACdx+hOLVMwQnyNfdVwUWzMOV5exZ20mPXQGdBUMLAVGA9dxFX7u\nPuffkOkiGtMrj1kxqqBz1KaY/8HaU3c/YaGQSgRvcVFO5ONUrzDJtSdsrsI4wm3+\nLzcKLFWk/oEPBwMRHgN8PkYSsDd6i+NXOb0Tslyiqpnyv3QN5mtPrAhLqrk5k2Gj\nSMufV1ycISkGglvVBInWJNzCDyCjSYviigk91hS+9L9eq7fqJoDWyzvOc6W0PLcA\nREIkBtQxAgMBAAECggEAPTclxCMo56qJrNN/QSWOgtt4ZyeqIbSxgw0WkDE3b+J+\nfDttnCZ7giJ4uXVkhrfFS4htZadAF/28pvlR5pLFcI0a5rI/LdxE7U1zJr23gmJq\ntzJXhSj5dHvkHH/hDGEnU+nHXf7mel92G3Y0LPBXxStAaLhiX7+CSdSVKzMqOgva\nYL03y++Z+VTWNqFveK0X2VW0cVzidwX7u76EZjZtRZolhfNP/IOULc7amIuEOeRF\naK4/8/VWVqIzSyPWshYeU61uKVYlBVEpARJV05Clh8dUiFBw2+elXcSO99KtHei9\nsU7Mi+OPyw9CQFwZhlSL55pVgwcMBhBTULb9OMgtEwKBgQDhj0ETg0eNaOOL6xOC\n+R/3rdRV35muI7gKvRrPRlzgh/zXA6E+KeG4KsrxVaX6Jf0NXLrPOriIX5y9a3Zo\n6W5e3U0hdHkilQQ3+CPUKFn8OYFyY6iTVcrGyqJTjSqsDsgNDns1aDd+BfFBieXj\n/9sJiWFZzx+cfjZXOs3rtS0ewwKBgQDM5VYWVa8OdHMbmtouoYNXDjt4isq4QiuS\nzjlOusZqIPhjqbAha9WF+oP6cmyyWCQCPn1smR+uEu3zyHr9YIkdxOtF5MQuJYoJ\n2pFXQ9vzVtLJ9AmGdg/AaeYSEFmJw54wscH1CFKox1f/Y0lf1hCqfTlZLABoMOOH\nJsjEyMr5+wKBgBn8JOUYlJ+n2778v+ywwowIDJQwBEZZexRRoMsMMhrzz579ng/J\nR2WuGF8hHNPqmHJ3olXJUAT17tqrjKKdccef+wjFoEbpn+jKv2XrmCJEhbMl4//F\nPG0WXwj9FFNqCIXoiy0l6m6sRJTmTAOuMA+zMfHkuKGQsLXv4lUrNB19AoGBAIuM\n92Em4p/ZuDxo74krACVe0Cp9fSyaBMtsIaP5mgHWitZ2UDuzEi66PQFqxZWCaqQM\no6g/clBBHEgZl4rTIRBhekyUTvmPH8EuWCczVK8bx109FO+7oWbPuZ87+3/U9/z6\nVLvq+0Fw5AJRQTxAtAEqYNDXIz/TbGQ0ijFdAMHZAoGAfPSEUZA83hZ1OEfrZXyz\nxEsVY6uTxsxAmrhFyR7RWSoG20lT9YOr1LZfZKpSeWokll3NPwSyKT7iUyR7/UWR\nZJi3OA1g8wls3tTMPdad/hJfBW6cgwMu/fBJRBvYI4NGZX7kFeU6QgEu0KiwhYtS\nUXMR3ptekhdEAvHDuOQYdKw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-7kx4k@voice-based-system.iam.gserviceaccount.com",
+  "client_id": "114843771144807375674",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-7kx4k%40voice-based-system.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
+ * 
+ * 
+ * 
+*/
+
+ 
  * */
 const Alexa = require("ask-sdk-core");
 const { Configuration, OpenAIApi } = require("openai");
